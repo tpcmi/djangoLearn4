@@ -3,3 +3,6 @@ venv
 __pycache__
 migrations
 djangoEnv
+uwsgi.log
+uwsgi.pid
+uwsgi.sock
