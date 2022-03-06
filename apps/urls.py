@@ -13,16 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.shortcuts import HttpResponse
 from django.contrib import admin
 from django.urls import path,include
-import fePractice
+from django.conf.urls.static import static
 
 def test_nginx(request):
     return HttpResponse("Nginx Success")
 
 urlpatterns = [
-    path('',test_nginx),
+    path('pre_online',test_nginx),
     path('pre_online/admin/', admin.site.urls),
     path('pre_online/fePractice/',include('fePractice.urls'))
 ]
