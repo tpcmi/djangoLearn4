@@ -23,7 +23,7 @@ def test_nginx(request):
     return HttpResponse("Nginx Success")
 
 urlpatterns = [
-    path('pre_online',test_nginx),
+    path('pre_online/',test_nginx),
     path('pre_online/admin/', admin.site.urls),
     path('pre_online/fePractice/',include('fePractice.urls'))
 ]

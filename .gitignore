@@ -8,3 +8,4 @@ uwsgi.log
 uwsgi.pid
 uwsgi.sock
 .DS_Store
+settings.py
