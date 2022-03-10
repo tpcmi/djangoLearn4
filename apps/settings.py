@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#fhpmv@1sv2%v1tw1!gmt15i*3y77gnco63fa)q5@af&g9%#rx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.tpxrx.com']
+ALLOWED_HOSTS = ['www.tpxrx.com','127.0.0.1','0.0.0.0','192.168.31.7']
 
 
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/pre_online/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 # STATICFILES_FINDERS = [
 #     'django.contrib.staticfiles.finde
@@ -130,7 +130,9 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 #     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 # ]
 
-# STATICFILES_DIRS = [
+STATICFILES_DIRS = [
+    BASE_DIR/"staticfiles/"
+]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

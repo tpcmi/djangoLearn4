@@ -7,3 +7,8 @@ def index(request):
         返回: 页面列表
     """
     return render(request,'fePractice/index.html')
+
+def extendCard(request):
+    """延伸卡片
+    """
+    return render(request,'fePractice/extendCard.html')

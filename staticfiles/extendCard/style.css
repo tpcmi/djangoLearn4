@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Muli',sans-serif;
+    display:flex;   /* 弹性布局 */
+    align-items: center;    /* 交叉轴对齐方式：居中 */
+    justify-content: center;    /* 主轴对齐方式：居中 */
+    height:100vh;   /*视窗高度100*/
+    overflow: hidden;   /* 元素内容太大时的操作：内容被裁减 */
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;   /* 背景图大小：按原比例缩放,当所在容器与图片大小不同时，图片四周会被裁剪 */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;    /* 光标属性，鼠标悬停在元素上时展示的样式 */
+    flex: 0.5;
+    margin: 10px;
+    position: relative;     /* 相对定位，根据原来的位置定位，原来的位置继续占有 */
+    transition: all 700ms ease-in;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width:480px){    /* 媒体查询 */
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
